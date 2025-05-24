@@ -1,0 +1,240 @@
+* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #004d40;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #00695c;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  background-color: #004d40;
+  box-shadow: 0 0 8px #ff9800;
+}
+
+/* Hero */
+.hero {
+  background-image: url('imagens/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 250px;
+}
+
+button:hover {
+  background-color: #e68900;
+}
+
+/* Excursões */
+#excursoes {
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+#excursoes h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #004d40;
+  font-size: 28px;
+}
+
+#excursoes ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+#excursoes ul li {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-weight: 600;
+  color: #004d40;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+  user-select: none;
+}
+
+#excursoes ul li:hover {
+  background-color: #004d40;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255,152,0,0.7);
+}
+
+/* Contato */
+#contato {
+  background-color: #e0f2f1;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#contato h2 {
+  color: #004d40;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+#contato p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.btn-contato {
+  display: inline-block;
+  margin: 10px 15px;
+  background-color: #004d40;
+  color: white;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-contato:hover {
+  background-color: #00695c;
+  box-shadow: 0 0 10px #004d40;
+}
+
+/* Rodapé */
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  button {
+    max-width: 100%;
+  }
+
+  #excursoes ul {
+    grid-template-columns: 1fr;
+  }
+
+  #contato {
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+}.excursao-img {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  height: 200px;
+}
+
+.galeria-cultural {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.galeria-cultural img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marcelo Tours</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 data-lang-pt="Marcelo Tours" data-lang-en="Marcelo Tours">Marcelo Tours</h1>
+    <nav>
+      <a href="#excursoes" data-lang-pt="Excursões" data-lang-en="Tours">Excursões</a>
+      <a href="#contato" data-lang-pt="Contato" data-lang-en="Contact">Contato</a>
+    </nav>
+    <select id="languageSelector">
+      <option value="pt">Português</option>
+      <option value="en">English</option>
+    </select>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2 data-lang-pt="Explore São Tomé com estilo" data-lang-en="Explore São Tomé in Style">Explore São Tomé com estilo</h2>
+      <p data-lang-pt="Experiências inesquecíveis com guias locais" data-lang-en="Unforgettable experiences with local guides">
+        Experiências inesquecíveis com guias locais
+      </p>
+      <button id="btnExcursoes" data-lang-pt="Ver Excursões" data-lang-en="See Tours">Ver Excursões</button>
+    </div>
+  </section>
+
+  <section id="excursoes">
+    <h2 data-lang-pt="Excursões Disponíveis" data-lang-en="Available Tours">Excursões Disponíveis</h2>
+    <ul>
+      <li>
+        <span data-lang-pt="Tour pela Floresta Tropical" data-lang-en="Rainforest Tour">Tour pela Floresta Tropical</span>
+        <img src="imagens/floresta.jpg" alt="Floresta Tropical" class="excursao-img" />
+      </li>
+      <li>
+        <span data-lang-pt="Visita às Praias Paradisíacas" data-lang-en="Paradisiacal Beaches Tour">Visita às Praias Paradisíacas</span>
+        <img src="imagens/praia.jpg" alt="Praia Paradisíaca" class="excursao-img" />
+      </li>
+      <li>
+        <span data-lang-pt="Observação de Aves Locais" data-lang-en="Local Birdwatching">Observação de Aves Locais</span>
+        <img src="imagens/bird.jpg" alt="Ave Local" class="excursao-img" />
+      </li>
+      <li>
+        <span data-lang-pt="Passeio Cultural pela Cidade" data-lang-en="Cultural City Tour">Passeio Cultural pela Cidade</span>
+        <div class="galeria-cultural">
+          <img src="imagens/igreja.jpg" alt="Igreja" />
+          <img src="imagens/tunel.jpg" alt="Túnel" />
+          <img src="imagens/museu.jpg" alt="Museu" />
+          <img src="imagens/barcos.jpg" alt="Barcos" />
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2 data-lang-pt="Fale Conosco" data-lang-en="Contact Us">Fale Conosco</h2>
+    <p data-lang-pt="Entre em contato pelo WhatsApp ou email para agendar sua excursão!"
+       data-lang-en="Contact us via WhatsApp or email to schedule your tour!">
+      Entre em contato pelo WhatsApp ou email para agendar sua excursão!
+    </p>
+    <a href="https://wa.me/5531999640842" target="_blank" class="btn-contato" rel="noopener noreferrer"
+       data-lang-pt="WhatsApp" data-lang-en="WhatsApp">WhatsApp</a>
+    <a href="mailto:viegastchelo@gmail.com" class="btn-contato"
+       data-lang-pt="Email" data-lang-en="Email">Email</a>
+  </section>
+
+  <footer>
+    <p data-lang-pt="© Samba Tours. Todos os direitos reservados."
+       data-lang-en="© Samba Tours. All rights reserved.">
+      © Samba Tours. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('btnExcursoes');
+    btn.addEventListener('click', () => {
+      document.getElementById('excursoes').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Alternância de idiomas
+    const langSelector = document.getElementById('languageSelector');
+
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll('[data-lang-pt]');
+      elements.forEach(el => {
+        el.innerText = el.getAttribute(`data-lang-${lang}`);
+      });
+    }
+
+    langSelector.addEventListener('change', (e) => {
+      changeLanguage(e.target.value);
+    });
+
+    // Define idioma padrão (português)
+    changeLanguage('pt');
+  </script>
+</body>
+</html>
