@@ -20,10 +20,6 @@ CSS3 — styling with flexbox/grid and responsive design
 
 🚀 Getting Started
 
-Clone the repository:
-
-git clone https://github.com/your-username/marcelo-tours.git
-
 
 Navigate into the folder:
 
